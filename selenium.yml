@@ -6,6 +6,7 @@ services:
   ports: 
    - 4444:4444
   container_name: hub
+ 
  chrome:
   image: selenium/node-chrome-debug
   ports:
@@ -13,6 +14,7 @@ services:
   links:
    - hub: selenium
   container_name: chrome
+ 
  firefox: 
   image: selenium/node-firefox-debug
   ports:
@@ -20,4 +22,4 @@ services:
   links:
    -hub: selenium
   container_name: firefox
-  
+...
