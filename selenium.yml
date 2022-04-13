@@ -18,8 +18,8 @@ services:
  firefox: 
   image: selenium/node-firefox-debug
   ports:
-   -5902:5900
+   - 5902:5900
   links:
-   -hub: selenium
+   - hub: selenium
   container_name: firefox
 ...
