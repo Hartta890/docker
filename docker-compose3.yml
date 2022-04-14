@@ -1,0 +1,20 @@
+---
+version: '3.8'
+services:
+ db:
+  image: postgres
+  environment:
+   postgres_PASSWORD: intelliqit
+   postgres_USER: myuser
+   postgres_DB: mydb
+
+ adminer:
+  image:
+  ports:
+   - 8888:8080
+
+ networks:
+  default:
+   externa:
+    name: intelliqit
+    
