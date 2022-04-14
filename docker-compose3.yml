@@ -4,7 +4,7 @@ services:
  db:
   image: postgres
   environment:
-   postgres_PASSWORD: intelliqit
+   postgres_PASSWORD: intelliqit1
    postgres_USER: myuser
    postgres_DB: mydb
 
@@ -16,5 +16,4 @@ services:
  networks:
   default:
    externa:
-    name: intelliqit
-    
+    name: intelliqit1
