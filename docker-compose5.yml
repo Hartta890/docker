@@ -1,0 +1,17 @@
+---
+version: '3.8'
+services:
+ db:
+  image: mysq
+  environment:
+   MYSQL_ROOT_PASSWORD: intelliqit1
+  volumes:
+   mydb: /var/lib/MYSQL_ROOT_PASSWORD
+ wordpress:
+  image: wordpress
+  ports:
+   - 9999:80
+volumes:
+ mydb:
+ wordpress:
+ 
