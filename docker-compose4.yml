@@ -3,18 +3,26 @@ version: '3.8'
 services:
  mydb:
   image: jenkins/jenkins
- ports:
-  - 5050:8080
+  ports:
+   - 5050:8080
+  networks:
+   - def
  qaserver:
   image: tomee
   ports:
-   - 6060
-  networks: -eyz
+   6060:8080
+  networks:
+   - ghi
+
  prodserver:
   image: tomee
   ports:
    - 7070:8080
   networks:
-  abc: {}
-  xyz: {}
+   - ghi
+
+networks:
+def: {}
+ghi: {}
+
   
