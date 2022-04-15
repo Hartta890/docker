@@ -1,0 +1,13 @@
+---
+version: '3.8'
+services:
+ jenkins:
+  build: .
+  ports:
+   - 7070:8080
+  container_name: jenkins
+ mytomcat:
+  image: tomee
+  ports: 
+   6060:8080
+  container_name: mytomcat
